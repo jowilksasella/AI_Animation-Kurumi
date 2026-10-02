@@ -1,0 +1,53 @@
+{
+  "mode": "built-in image_gen",
+  "prompts": [
+    {
+      "character": "kurumi",
+      "reference": "official/kurumi-main.png",
+      "output": "generated/kurumi-actions-v1.png",
+      "prompt": "Create a production-ready transparent PNG sprite sheet of EXACTLY FOUR full-body action/expression variants of the SAME adult anime character, FUKUGA KURUMI from FX Fighter Kurumi-chan, based closely on the supplied official reference image. Treat image 1 as the identity and costume reference, not as a scene background. Preserve her pink bob haircut and bangs, pink-magenta eyes, facial proportions, white short-sleeved collared dress, burgundy neck ribbon and waist ribbon, and burgundy Mary Jane shoes. Preserve the clean 2D TV-anime cel shading, line weight and color palette from the reference. Layout: regular 2-column by 2-row sprite sheet, exactly one upright full-body character centered within each quadrant, same figure scale and head height, generous transparent gutters, complete hands, hair and shoes in every cell. Top left: friendly explanatory pose, open palm and attentive speaking expression. Top right: thinking, one hand near chin, thoughtful focused eyes. Bottom left: surprised by a price movement, wide eyes, slightly open mouth, hands raised near chest. Bottom right: concerned but composed, knitted brows, hands lightly clasped, no exaggerated distortion. All four must clearly remain Kurumi, with the same clothing and hairstyle. Neutral camera and natural upright stance, no pinup pose. Genuine transparent alpha background across all cells and gutters; no white fill, no painted checkerboard, no ground shadows, no scenery, no chart, no text, no labels, no watermark. High-resolution portrait-oriented sheet, clean isolated silhouettes suitable for animated explainer overlays.",
+      "expressions": [
+        "讲解",
+        "思考",
+        "惊讶",
+        "担忧"
+      ]
+    },
+    {
+      "character": "mochiko",
+      "reference": "official/mochiko-main.png",
+      "output": "generated/mochiko-actions-v1.png",
+      "prompt": "Create a production-ready transparent PNG sprite sheet of EXACTLY FOUR full-body action/expression variants of the SAME adult anime character, KOGANE MOCHIKO from FX Fighter Kurumi-chan, based closely on the supplied official reference image. Image 1 is the exact identity and costume reference. Preserve her shoulder-length purple hair with soft curled ends and side-swept bangs, purple eyes, mature calm facial features, white long-sleeved tunic dress, black choker, long black shawl/stole and the black-purple lace-up shoes. Keep the shawl recognizable across poses without obscuring the face or hands. Use the reference's clean 2D anime linework, restrained cel shading and palette; do not restyle her into another character or change clothing. Layout: a regular 2-column by 2-row sprite sheet, exactly one upright full-body figure centered in each quadrant, same scale, aligned head/foot framing, generous transparent gutters, hands and shoes entirely visible. Top left: calm explaining with an open hand, confident analytical expression. Top right: thoughtful with a hand near chin and gently narrowed eyes. Bottom left: a clear but restrained surprised reaction, raised brows and parted lips. Bottom right: serious questioning, one palm outward, composed critical expression. Natural upright body language, no pinup posture. Genuine transparent alpha background; no white fill, checkerboard texture, floor shadow, scene, props, chart, text, labels or watermark. High-resolution portrait-oriented sheet, isolated silhouettes for video overlays.",
+      "expressions": [
+        "讲解",
+        "思考",
+        "惊讶",
+        "质疑"
+      ]
+    },
+    {
+      "character": "mebuki",
+      "reference": "official/mebuki-main.png",
+      "output": "generated/mebuki-actions-v1.png",
+      "prompt": "Create a production-ready transparent PNG sprite sheet of EXACTLY FOUR full-body action/expression variants of the SAME adult anime character, YAMASHI MEBUKI from FX Fighter Kurumi-chan, using the supplied official reference as the identity, hairstyle and outfit source. Preserve the tousled short blonde hair, yellow-green eyes, round cheerful face, pale green puff-sleeved top, dark teal skirt, dark thigh-high stockings and matching dark shoes. Preserve the proportions, tidy TV-anime outlines, cel shading and colors of the reference, with no costume changes. Layout: regular 2 columns by 2 rows, one complete upright full-body character centered in each quadrant, consistent scale and head/foot framing, generous transparent gutters. Top left: enthusiastic explaining, open palm and cheerful speaking smile. Top right: curious thinking, hand near chin, tilted eyebrows but upright body. Bottom left: excited surprise, wide eyes and small raised hands near chest. Bottom right: nervous realization, worried eyebrows, small anxious mouth and hands clasped, still recognizable and not caricatured. Complete hair, hands, skirts and shoes in each cell. Natural poses, no pinup styling. Genuine transparent alpha background with no white fill, painted checkerboard, floor, shadows, scene, props, chart, text, labels or watermark. High-resolution portrait-oriented isolated sprite sheet suitable for video overlays.",
+      "expressions": [
+        "讲解",
+        "思考",
+        "兴奋惊讶",
+        "紧张"
+      ]
+    },
+    {
+      "character": "yasuko",
+      "reference": "official/yasuko-main.png",
+      "output": "generated/yasuko-actions-v1.png",
+      "prompt": "Create a production-ready transparent PNG sprite sheet of EXACTLY FOUR full-body action/expression variants of the SAME adult anime character, TAKANE YASUKO from FX Fighter Kurumi-chan, based closely on the supplied official reference. Image 1 is the exact design reference. Preserve her short dark twin pigtails, white rabbit hair ornaments, red crossed hair clips, red eyes, black choker with small pendant, white rabbit-graphic sleeveless top with black straps, red plaid pleated skirt, black wrist accessories, asymmetric black-and-white legwear and red-and-black boots. Do not remove or invent accessories and do not change outfit coverage. Match the original clean 2D TV-anime linework, cel shading and palette. Layout: regular 2-column by 2-row sprite sheet, one upright complete full-body figure per quadrant, consistent scale, aligned head/foot framing, generous transparent gutters. Top left: confident explaining, one open palm and small knowing smile. Top right: skeptical thinking, one hand near chin, mildly raised eyebrow. Bottom left: startled realization, wide eyes and one small hand raised near chest. Bottom right: serious cautionary gesture, an open palm raised and focused concerned expression, not aggressive. All hands, hair ornaments, skirts and shoes fully visible. Natural upright stance, no pinup pose. Genuine transparent alpha background throughout, no white fill, checkerboard, ground shadow, scenery, props, chart, text, labels or watermark. High-resolution portrait-oriented isolated sprite sheet for explainer-video overlays.",
+      "expressions": [
+        "讲解",
+        "怀疑思考",
+        "惊讶",
+        "严肃提醒"
+      ]
+    }
+  ]
+}

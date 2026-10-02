@@ -1,3 +1,32 @@
+# AI Animation · 久留美定制版
+
+这是 [Unclecheng-li/AI_Animation](https://github.com/Unclecheng-li/AI_Animation) 的定制 fork。
+
+**默认角色已改为《FX战士久留美》的四人阵容**：福贺久留美、小金萌智子、山师芽吹、高根やす子。
+
+- [定制 Skill](skills/video-shot-demos/SKILL.md)：默认使用此角色库，按语义切换动作表情。
+- [素材及预览](skills/video-shot-demos/assets/fx-kurumi/README.md)：**12 个 PNG 文件**，含 8 张官方原图、4 张四格 AI 动作图，四格里共 16 种姿态。
+- [角色与气泡规则](skills/video-shot-demos/references/character-reactions.md)：放大人物、允许下半身出画、侧向箭头指向人物、多人搭配。
+- [字幕与主题进度](skills/video-shot-demos/references/kurumi-production.md)：简体书面语、主题色字幕、当前话题及时间进度。
+
+保留原仓库的 10 组 Skill 及历史示例；本次修改重点是 `video-shot-demos`。旧的安安/橘雪莉素材保留在历史示例中，不再是本 fork 的默认角色。
+
+## 安装与调用
+
+```bash
+npx skills add https://github.com/jowilksasella/AI_Animation-Kurumi/tree/master/skills/video-shot-demos
+```
+
+示例：
+
+> 用 video-shot-demos 把这段口播做成科普动画。使用久留美角色库，保留原声，混用四位角色及不同表情，加入简体书面语字幕和当前主题进度条。
+
+素材来源见 [sources.json](skills/video-shot-demos/assets/fx-kurumi/sources.json)，生成提示词见 [generation-prompts.json](skills/video-shot-demos/assets/fx-kurumi/generation-prompts.json)。不包含本地音频、整片视频、转写记录或本机绝对路径。
+
+---
+
+## 原仓库说明
+
 <div align="center">
   
 # AI Animation Skills

@@ -124,11 +124,11 @@ window.__sfx=(function(){
 <title>镜头 X-X · 【改成镜头标题】</title>
 
 <!-- [改这里] 字体：按本页风格换 2-4 个家族（展示英文 + 中文 + 等宽数据） -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+SC:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:100%;height:100%;background:#111;overflow:hidden;font-family:'Noto Sans SC',sans-serif}
+html,body{width:100%;height:100%;background:#111;overflow:hidden;font-family:'Microsoft YaHei',sans-serif}
 body.paused *{animation-play-state:paused!important}
 /* [改这里] 舞台底色/纹理 —— 换成你这套风格的材质（纸纹/网点/扫描线/蓝图网格…） */
 #stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform:translate(-50%,-50%);overflow:hidden;
@@ -155,7 +155,7 @@ body.paused *{animation-play-state:paused!important}
 #heroCard.slam{animation:slam .5s cubic-bezier(.2,1.5,.4,1)}
 @keyframes slam{35%{transform:translate(-50%,-50%) scale(1.08) rotate(-1.5deg)}}
 
-/* [改这里] 角色特写位：表情包图片路径按项目素材改；无素材则删掉改用纯 CSS 吉祥物 */
+/* [改这里] 角色特写位：表情包图片路径历史 CSS 保留；本 fork 使用 fx-kurumi/runtime.css 中的角色层 */
 #mascot{position:absolute;left:-10px;bottom:-8px;width:380px;z-index:28;opacity:0;transition:opacity .9s ease;filter:drop-shadow(0 14px 30px rgba(0,0,0,.35))}
 #mascot.show{opacity:1}
 #mascot img{width:100%;display:block;animation:bob 3.1s ease-in-out infinite alternate}
@@ -188,6 +188,9 @@ body.paused *{animation-play-state:paused!important}
 #replay.done{animation:pulse 1.2s infinite;border-color:#ffd23f;color:#ffd23f}
 @keyframes pulse{50%{box-shadow:0 0 14px rgba(255,210,63,.8)}}
 </style>
+<link rel="stylesheet" href="fx-kurumi/runtime.css">
+<script src="fx-kurumi/cast-data.js"></script>
+<script src="fx-kurumi/runtime.js"></script>
 </head>
 <body>
 <div id="stage">
@@ -205,12 +208,8 @@ body.paused *{animation-play-state:paused!important}
       <div class="cardcap">【核心数字/结论的图解】</div>
     </div>
 
-    <!-- 角色特写：开工时把 assets/examples/anan - emotion rename/ 整夹复制进输出目录，
-         按情绪速查表(references/character-reactions.md)选图后取消注释 -->
-    <!-- <div id="mascot">
-      <div class="say">吐槽/惊叹台词，<b>关键词</b>高亮</div>
-      <img src="anan - emotion rename/12_粉颊捧笺_娇羞雀跃.png" alt="安安">
-    </div> -->
+    <!-- 本 fork 的角色层由 FXKurumi.mount 创建，放在 #cam 外。 -->
+
   </div>
 
   <div id="dim"></div>
@@ -239,6 +238,7 @@ function cnt(el,from,to,dur){tws.push({t:performance.now()-t0,d:dur,e:eo,f:p=>{e
 function tick(now){if(paused)return;const el=now-t0;
   for(const c of cues)if(!c.done&&el>=c.t){c.done=true;c.f()}
   for(let i=tws.length-1;i>=0;i--){const tw=tws[i],p=(el-tw.t)/tw.d;if(p<0)continue;const q=Math.min(1,p);tw.f(tw.e?tw.e(q):q);if(q>=1){tws.splice(i,1);if(tw.done)tw.done()}}
+  if(window.FXKurumi)FXKurumi.tick(el);
   $('#bar').style.width=Math.min(100,el/DUR*100)+'%';
   const t=el/1000;$('#tc').textContent=String(Math.floor(t/60)).padStart(2,'0')+':'+String(Math.floor(t%60)).padStart(2,'0');
   if(el<DUR+2500)requestAnimationFrame(tick);else $('#replay').classList.add('done');
@@ -257,14 +257,16 @@ function camFocus(fx,fy,s,dur){let tx=960-fx*s,ty=540-fy*s;   /* 对准 (fx,fy) 
 /* ────────────────────────────────────────────────
    [改这里] 本镜头的叙事 cue（示例 12s，注释引用口播节拍）
    ──────────────────────────────────────────────── */
+const customCast=FXKurumi.mount({stage:'#stage',character:'kurumi',expression:'explain',side:'left'});
+const customFilm=FXKurumi.timeline({stage:'#stage',title:'【本镜头主题】',total:DUR/1000,captions:[{start:1,end:4,text:'【在此填写简体书面语字幕】'}]});
 on(300,()=>camTo(0,0,1,2.2));                                   // 开场拉镜：特写 → 全景
-on(400,()=>{$('#title').classList.add('show')});
+on(400,()=>{$('#title').classList.add('show');customCast.show('从图解出发，<br>理解<b>核心概念</b>。')});
 on(1500,()=>{$('#heroCard').classList.add('in')});
-on(3000,()=>__sfx.pop(0.5));                                        // 口播第 1 句节拍（口播对齐只写 cue 注释，不做字幕条）
+on(3000,()=>__sfx.pop(0.5));                                        // 口播第 1 句节拍（字幕与口播使用同一时间轴）
 on(5000,()=>{camFocus(960,540,1.22,1.0);$('#heroCard').classList.add('slam')});  // 高潮推近
 on(6800,()=>cnt($('#heroNum'),0,2436,1400));                     // 数字滚动
 on(8500,()=>camTo(0,0,1,1.2));
-on(9500,()=>{const m=$('#mascot');if(m)m.classList.add('show')});   // 角色吐槽登场（无素材时自动跳过）
+on(9500,()=>{customCast.setExpression('surprise');customCast.show('关键结论，<br>关注<b>市场机制</b>。')});   // 角色吐槽登场（无素材时自动跳过）
 /* 音效 cue：见 references/sfx.md 记法 */
 on(300,()=>__sfx.swipe(0.6));
 on(1500,()=>__sfx.pop(0.7));

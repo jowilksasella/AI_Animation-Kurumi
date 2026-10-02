@@ -1,3 +1,11 @@
+# video-shot-demos · 久留美定制版
+
+默认使用 [四人角色素材库](assets/fx-kurumi/README.md)，包含 12 个 PNG 文件及 16 种生成姿态。[打开角色预览](assets/fx-kurumi/preview.html)。
+
+本 fork 以 [SKILL.md](SKILL.md)、[角色规范](references/character-reactions.md)、[字幕与进度规范](references/kurumi-production.md) 为当前工作流；下方保留上游说明与历史案例。旧人物不再是默认阵容，原来“无字幕条/隐藏进度”的历史约定由本定制规范替代。
+
+---
+
 # video-shot-demos
 
 > 电影级视频分镜演示动画 Skill —— 一个镜头一个 HTML，三辑 41 种风格轮换

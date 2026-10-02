@@ -1,3 +1,11 @@
+# Kurumi custom fork
+
+This fork keeps the upstream skills and examples while customizing `video-shot-demos` to use the four FX Fighter Kurumi characters. See the [custom skill](skills/video-shot-demos/SKILL.md) and [character pack](skills/video-shot-demos/assets/fx-kurumi/README.md).
+
+The pack contains 12 PNG files: 8 official reference images and four 2×2 generated sheets containing 16 poses. The default profile uses large cutout characters, directional speech bubbles, Simplified Chinese written captions, and visible topic progress. Explicit user choices override the profile.
+
+---
+
 <div align="center">
 
 # AI Animation Skills

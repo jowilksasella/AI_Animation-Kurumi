@@ -1,0 +1,101 @@
+{
+  "official_site": "https://fxkurumi-info.com/",
+  "characters": [
+    {
+      "id": "kurumi",
+      "official_name": "福賀くるみ",
+      "files": [
+        {
+          "file": "official/kurumi-main.png",
+          "source_url": "https://fxkurumi-info.com/assets/img/character/main_kurumi.png",
+          "size": [
+            1038,
+            1300
+          ],
+          "transparent": true
+        },
+        {
+          "file": "official/kurumi-face.png",
+          "source_url": "https://fxkurumi-info.com/assets/img/character/face_kurumi.png",
+          "size": [
+            700,
+            500
+          ],
+          "transparent": true
+        }
+      ]
+    },
+    {
+      "id": "mochiko",
+      "official_name": "小金萌智子",
+      "files": [
+        {
+          "file": "official/mochiko-main.png",
+          "source_url": "https://fxkurumi-info.com/assets/img/character/main_mochiko.png",
+          "size": [
+            1038,
+            1300
+          ],
+          "transparent": true
+        },
+        {
+          "file": "official/mochiko-face.png",
+          "source_url": "https://fxkurumi-info.com/assets/img/character/face_mochiko.png",
+          "size": [
+            700,
+            500
+          ],
+          "transparent": true
+        }
+      ]
+    },
+    {
+      "id": "mebuki",
+      "official_name": "山師芽吹",
+      "files": [
+        {
+          "file": "official/mebuki-main.png",
+          "source_url": "https://fxkurumi-info.com/assets/img/character/main_mebuki.png",
+          "size": [
+            1038,
+            1300
+          ],
+          "transparent": true
+        },
+        {
+          "file": "official/mebuki-face.png",
+          "source_url": "https://fxkurumi-info.com/assets/img/character/face_mebuki.png",
+          "size": [
+            700,
+            500
+          ],
+          "transparent": true
+        }
+      ]
+    },
+    {
+      "id": "yasuko",
+      "official_name": "高根やす子",
+      "files": [
+        {
+          "file": "official/yasuko-main.png",
+          "source_url": "https://fxkurumi-info.com/assets/img/character/main_yasuko.png",
+          "size": [
+            1038,
+            1300
+          ],
+          "transparent": true
+        },
+        {
+          "file": "official/yasuko-face.png",
+          "source_url": "https://fxkurumi-info.com/assets/img/character/face_yasuko.png",
+          "size": [
+            700,
+            500
+          ],
+          "transparent": true
+        }
+      ]
+    }
+  ]
+}
