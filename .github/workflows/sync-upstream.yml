@@ -1,0 +1,61 @@
+# Keep this fork in step with Unclecheng-li/AI_Animation without manual "Sync fork".
+# Uses GitHub's server-side merge-upstream API, so the 600 MB+ of upstream assets
+# never pass through the runner. Fork-only commits (the Kurumi pack) are kept via a merge commit.
+# If the merge conflicts, the run fails, GitHub emails you, and nothing is pushed.
+name: Sync upstream
+
+on:
+  schedule:
+    - cron: "17 */6 * * *" # every 6 hours (UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write # re-enable this workflow so the 60-day inactivity rule never switches it off
+
+concurrency:
+  group: sync-upstream
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      BRANCH: master
+    steps:
+      - name: Merge upstream into fork
+        run: |
+          set -euo pipefail
+          before=$(gh api "repos/$REPO/commits/$BRANCH" --jq .sha)
+          if ! result=$(gh api -X POST "repos/$REPO/merge-upstream" -f branch="$BRANCH" 2>&1); then
+            echo "::error::Upstream merge failed (usually a conflict with fork-only changes): $result"
+            {
+              echo "## ❌ Upstream sync failed"
+              echo
+              echo '```'
+              echo "$result"
+              echo '```'
+              echo
+              echo "Resolve locally: \`git fetch upstream && git merge upstream/$BRANCH\`, fix conflicts, push."
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+          echo "$result"
+          type=$(echo "$result" | jq -r '.merge_type')
+          after=$(gh api "repos/$REPO/commits/$BRANCH" --jq .sha)
+          {
+            if [ "$type" = "none" ]; then
+              echo "## ✅ Already up to date with upstream"
+            else
+              echo "## ✅ Pulled new upstream commits ($type)"
+              echo
+              gh api "repos/$REPO/compare/$before...$after" \
+                --jq '.commits[] | "- `" + .sha[0:7] + "` " + (.commit.message | split("\n")[0])'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Keep scheduled workflow alive
+        if: always()
+        run: gh api -X PUT "repos/$REPO/actions/workflows/sync-upstream.yml/enable"
