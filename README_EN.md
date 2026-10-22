@@ -14,7 +14,7 @@ The pack contains 12 PNG files: 8 official reference images and four 2×2 genera
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](./LICENSE)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](#contributing)
-[![Skills count](https://img.shields.io/badge/Skills-10-orange?style=flat-square)](#skills-gallery)
+[![Skills count](https://img.shields.io/badge/Skills-13-orange?style=flat-square)](#skills-gallery)
 [![Spec](https://img.shields.io/badge/Spec-SKILL.md-black?style=flat-square)](https://agentskills.io)
 
 🌐 **中文版**: [`README.md`](README.md)
@@ -38,6 +38,9 @@ One sentence is all it takes:
 - 📱 **Phone UI demos** — a "real phone" performing a choreographed screen recording: lockscreen notifications, chats, settings, App screens shot by shot, HyperOS-grade motion + a 3D-posture phone actor
 - 🗂️ **Stacked data cards** — argument cards pop in from the bottom while used ones stack to the left as a deck: line-drawing, count-ups, gauges and more cascade in on a millisecond timeline synced to the voiceover — fullscreen-record it and it's a finished cut
 - 🖥️ **Windows 11 simulation** — a "real PC" rebuilt 1:1: Explorer, Start menu, system dialogs and the blue repair screen shot by shot, with a performing cursor leading the viewer and teaching markers layered on top
+- 📐 **Swiss-style chart demos** — editorial-grade typography on paper-and-ink: every shot gets one content-matched visualization (timelines, loops, flow chains, heat matrices… 20 vocab types) with a single accent orange
+- 🎞️ **UI2V motions library** — a full offline mirror of 1,262 GSAP motion packages (ui2v.com/motions, 641MB): lookup-by-shot-purpose indexes + a recipe for hanging paused timelines onto cue axes — plug-and-play visuals for demo pages
+- 🎥 **Code-rendered MV library** — two deterministic music-video reference projects (lyric MV + generative MV): every frame = f(song time), browser preview identical to the offline export
 
 <div align="center">
 
@@ -102,6 +105,27 @@ One sentence is all it takes:
 <a href="#win11-ui-demos"><img width="2560" height="1440" alt="win11-ui-demos" src="./skills/win11-ui-demos/assets/preview/main.png" /></a>
 <br/><a href="#win11-ui-demos"><strong>win11-ui-demos</strong></a>
 <br/><sub>Windows 11 simulation / cursor performance</sub>
+</td>
+</tr>
+<tr>
+<td colspan="4" valign="top" align="center">
+<a href="#swiss-shot-demos"><img width="2560" height="1440" alt="swiss-shot-demos" src="./skills/swiss-shot-demos/assets/preview/main.png" /></a>
+<br/><a href="#swiss-shot-demos"><strong>swiss-shot-demos</strong></a>
+<br/><sub>Swiss-style chart demos / editorial typography</sub>
+</td>
+</tr>
+<tr>
+<td colspan="4" valign="top" align="center">
+<a href="#ui2v-motions"><img width="2560" height="1440" alt="ui2v-motions" src="./skills/ui2v-motions/assets-preview/main.png" /></a>
+<br/><a href="#ui2v-motions"><strong>ui2v-motions</strong></a>
+<br/><sub>UI motion library / 1,262 GSAP motion packages</sub>
+</td>
+</tr>
+<tr>
+<td colspan="4" valign="top" align="center">
+<a href="#code-mv-render"><img width="2560" height="1440" alt="code-mv-render" src="./skills/code-mv-render/assets/preview/worldexecute-cover.jpg" /></a>
+<br/><a href="#code-mv-render"><strong>code-mv-render</strong></a>
+<br/><sub>Code-rendered MV library / lyric MV + generative MV</sub>
 </td>
 </tr>
 </table>
@@ -507,6 +531,130 @@ Links: [README](./skills/win11-ui-demos/README.md) · [SKILL.md](./skills/win11-
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 
+#### `swiss-shot-demos`
+
+<a href="./skills/swiss-shot-demos">
+<img width="2560" height="1440" alt="swiss-shot-demos preview" src="./skills/swiss-shot-demos/assets/preview/main.png" />
+</a>
+
+**Category:** Swiss-style chart demos / editorial typography
+**For:** knowledge-course videos, tech retrospectives, product launches, security explainers — anywhere needing the restrained aesthetic of "paper & ink + one content-matched visualization per shot"; also the systematic cure for AI's default dark-and-shiny demos.
+
+`swiss-shot-demos` produces Swiss / International Typographic Style shot demos: paper-grey base, charcoal ink, hairline rules, a 7-step grayscale ladder (lightness *is* data), and a single accent orange per page — editorial-grade typography with Inter at display sizes on a 12-column grid. The core method is **chart-first**: ask "what chart is this?" for every voiceover line, then pick from 20 vocab types (big-number counters, hairline bar charts, timelines, loop rings, flow chains, swimlanes, state machines, split comparisons, nested frames, heat matrices, dot arrays, tally lists, ink-terminal cards…), with the main graphic filling ≥55% of the frame. Glow/neon/gradient effects are banned outright. Ships with 68 production shots (a complete AI-pentest tutorial) + a starter template with the Swiss system preinstalled.
+
+Highlights:
+- One canonical Swiss token set: paper `#F0EFEB` / ink `#1C1C1A` / grayscale L1–L7 / a single accent orange `#F5572F` highlighting exactly one hero per page
+- 20-entry content→chart vocabulary, all pure CSS/SVG, zero external chart libraries
+- A hard ban list that vetoes the entire dark-and-shiny family (glow, blooms, gradients, scanlines, bouncing)
+- Three entrance verbs — pop / fade / draw (SVG stroke) — with fast-in-fast-out easing; beat animations always cue+tws, freezable
+- Built-in QA freeze hook: append `#auto,t=ms` to the URL to auto-start and freeze at any moment for headless screenshots
+- Production discipline: cue times derived from absolute voiceover offsets, a number whitelist (no invented figures), no faked terminal output
+
+<table>
+<tr>
+<td align="center" width="16.6%"><img width="2560" height="1440" alt="AI loop" src="./skills/swiss-shot-demos/assets/preview/shot-01.png" /></td>
+<td align="center" width="16.6%"><img width="2560" height="1440" alt="meltdown timeline" src="./skills/swiss-shot-demos/assets/preview/shot-05.png" /></td>
+<td align="center" width="16.6%"><img width="2560" height="1440" alt="dot collision" src="./skills/swiss-shot-demos/assets/preview/shot-06.png" /></td>
+<td align="center" width="16.6%"><img width="2560" height="1440" alt="nested frame" src="./skills/swiss-shot-demos/assets/preview/shot-12.png" /></td>
+<td align="center" width="16.6%"><img width="2560" height="1440" alt="split compare" src="./skills/swiss-shot-demos/assets/preview/shot-40.png" /></td>
+<td align="center" width="16.6%"><img width="2560" height="1440" alt="heat matrix" src="./skills/swiss-shot-demos/assets/preview/shot-49.png" /></td>
+</tr>
+<tr>
+<td align="center"><sub><code>AI loop ring</code><br />shot-0-1 five acts</sub></td>
+<td align="center"><sub><code>Meltdown timeline</code><br />four darkening steps</sub></td>
+<td align="center"><sub><code>Dot collision</code><br />15 → 50+ tripling</sub></td>
+<td align="center"><sub><code>Nested frame</code><br />host ⊃ guest VM</sub></td>
+<td align="center"><sub><code>Split compare</code><br />CTF vs range</sub></td>
+<td align="center"><sub><code>Heat matrix</code><br />grayscale = data</sub></td>
+</tr>
+</table>
+
+<sub>↑ 6 of 20 chart vocab types — <a href="./skills/swiss-shot-demos/README.md"><b>open the full chart vocabulary</b></a> (68 runnable production samples).</sub>
+
+Links: [README](./skills/swiss-shot-demos/README.md) · [SKILL.md](./skills/swiss-shot-demos/SKILL.md)
+
+---
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+#### `ui2v-motions`
+
+<a href="./skills/ui2v-motions">
+<img width="2560" height="1440" alt="ui2v-motions preview" src="./skills/ui2v-motions/assets-preview/main.png" />
+</a>
+
+**Category:** UI motion library / plug-and-play visuals for demos
+**For:** video demo pages, product pages and landing pages that need high-quality UI motion (chart entrances, list scrolls, card flips, typographic编排, count-ups, timeline reveals…) — a warehouse of motions the AI can look up by "what you're trying to say".
+
+`ui2v-motions` is a **full offline mirror** of the `illli-studio/motions` repository behind ui2v.com (2026-10-05, 9,669 files / 641MB, zero-miss verified): **1,262 motion packages**, each a single-file HTML plus one *paused* GSAP timeline (1,150 of them 1920×1080). Paused-by-default is a feature — the caller owns the pacing, which is exactly the same architecture as this repo's demo skills (virtual clock / cue axis): map the whole motion across a voiceover span with `TL.time(p*duration)`, or seek sentence by sentence. Ships with a 25-category lookup-by-purpose overview, a 1,262-row use table, and per-master short lists.
+
+Highlights:
+- 1,262 packages fully offline (registry-item.json metadata everywhere); look up by purpose: purpose overview + programmable CSV + per-master short lists
+- Paused GSAP timelines share the demo chassis architecture; ready-made integration recipe (whole-span mapping or per-line seeking)
+- Four hard constraints documented: localize GSAP (43 packages bundle a copy), no iframes, pause on entry, scale 720p ×1.5
+- Red lines: terminal packages contribute frames only (no fake output), never copy sample figures, re-skin to host tokens, verify licensing at the source before publishing
+- Official CLI and bilingual docs included
+
+<table>
+<tr>
+<td align="center" width="16.6%"><a href="./skills/ui2v-motions/01_动效库/itelmn/hero-badge-earn/index.html"><img width="2560" height="1440" alt="badge earn" src="./skills/ui2v-motions/assets-preview/shot-badge.png" /></a></td>
+<td align="center" width="16.6%"><a href="./skills/ui2v-motions/01_动效库/itelmn/agent-immune-codex-workflow/index.html"><img width="2560" height="1440" alt="workflow" src="./skills/ui2v-motions/assets-preview/main.png" /></a></td>
+<td align="center" width="16.6%"><a href="./skills/ui2v-motions/01_动效库/itelmn/agent-immune-screenflow/index.html"><img width="2560" height="1440" alt="screenflow" src="./skills/ui2v-motions/assets-preview/shot-screenflow.png" /></a></td>
+<td align="center" width="16.6%"><a href="./skills/ui2v-motions/01_动效库/itelmn/claw-game-release/index.html"><img width="2560" height="1440" alt="game release" src="./skills/ui2v-motions/assets-preview/shot-release.png" /></a></td>
+<td align="center" width="16.6%"><a href="./skills/ui2v-motions/01_动效库/itelmn/hero-deploy-pipeline/index.html"><img width="2560" height="1440" alt="deploy pipeline" src="./skills/ui2v-motions/assets-preview/shot-pipeline.png" /></a></td>
+<td align="center" width="16.6%"><a href="./skills/ui2v-motions/01_动效库/itelmn/hero-chat-bubbles/index.html"><img width="2560" height="1440" alt="chat bubbles" src="./skills/ui2v-motions/assets-preview/shot-chat.png" /></a></td>
+</tr>
+<tr>
+<td align="center"><sub><code>hero-badge-earn</code><br />badge reveal</sub></td>
+<td align="center"><sub><code>codex-workflow</code><br />workflow choreography</sub></td>
+<td align="center"><sub><code>agent-screenflow</code><br />screen flow demo</sub></td>
+<td align="center"><sub><code>claw-game-release</code><br />release cover</sub></td>
+<td align="center"><sub><code>hero-deploy-pipeline</code><br />pipeline flow</sub></td>
+<td align="center"><sub><code>hero-chat-bubbles</code><br />chat bubbles</sub></td>
+</tr>
+</table>
+
+<sub>↑ 6 of 1,262 motion packages — <a href="./skills/ui2v-motions/README.md"><b>open the lookup indexes & integration recipe</b></a>.</sub>
+
+Links: [README](./skills/ui2v-motions/README.md) · [SKILL.md](./skills/ui2v-motions/SKILL.md)
+
+---
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+#### `code-mv-render`
+
+<a href="./skills/code-mv-render">
+<img width="2560" height="1440" alt="code-mv-render preview" src="./skills/code-mv-render/assets/preview/worldexecute-cover.jpg" />
+</a>
+
+**Category:** Code-rendered MV library / music-video render engineering
+**Best for:** making a full-length, audio-backed, frame-deterministic music video (lyric MV / generative MV) — when you want the "frame = f(song time), preview identical to export" engineering methodology rather than single-page demo clips.
+
+`code-mv-render` collects two deterministic, open-source music-video reference projects: **world-execute-me-lyric-mv** (a lyric MV for Mili's "world.execute(me);": Canvas2D+WebGL2, three picture kinds — chat interface / three-ink plates / code — with color-as-state) and **pdoom-video** (a generative MV for "I'm Upping My P(doom)": three.js word-synced karaoke typography + sub-frame motion blur). To make a full-length MV, fork/adapt the closest one instead of building a render pipeline from scratch.
+
+Highlights:
+- One principle, two implementations: **every frame is a function of song time** (`renderFrame(t)`), so browser preview and headless-Chrome export are identical frame by frame
+- Reusable methodology: color-as-state palettes, centralized cue tables, **block-adaptive sub-frame motion blur** (12 static / 36 camera / 108–324 whip), preview = export
+- Production-grade **flash safety** (WCAG 2.3.1 self-check) + audio-sync / single-frame-jump checks + contact-sheet regression
+- Both projects export 1080p60 / 4K60; two engineering spec digests in `references/`
+- Clear license boundary: code MIT, silhouettes CC BY-NC-SA, **song & lyrics not in the repos** (bring your own, follow the original authors' guidelines)
+
+<table>
+<tr>
+<td align="center" width="60%"><img width="2560" height="1440" alt="world.execute(me); cover" src="./skills/code-mv-render/assets/preview/worldexecute-cover.jpg" /><br /><sub><code>world-execute-me-lyric-mv</code><br />three-ink plates / chat UI & character silhouettes</sub></td>
+<td align="center" width="40%"><img width="2560" height="1440" alt="pdoom" src="./skills/code-mv-render/assets/preview/pdoom-fig04.jpg" /><br /><sub><code>pdoom-video</code><br />line-art scene + word-synced typography</sub></td>
+</tr>
+</table>
+
+<sub>↑ Frame captures of both projects — <a href="./skills/code-mv-render/README.md"><b>open the details & licensing notes</b></a>.</sub>
+
+Links: [README](./skills/code-mv-render/README.md) · [SKILL.md](./skills/code-mv-render/SKILL.md)
+
+---
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
 ### Installation
 
 | # | Method | Best for | Pin a version? |
@@ -531,6 +679,9 @@ npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/ca
 npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/video-shot-demos
 npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/stacked-data-cards
 npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/win11-ui-demos
+npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/swiss-shot-demos
+npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/ui2v-motions
+npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/code-mv-render
 ```
 
 > **Installs the latest `main` by default.** The CLI reads each skill's latest `SKILL.md` straight from the source tree.
@@ -602,6 +753,14 @@ Use stacked-data-cards to turn these three arguments into a stacked data-card an
 Use win11-ui-demos to turn this Windows tutorial's operations into cursor-driven simulation animations — show me the storyboard first
 ```
 
+```
+Use swiss-shot-demos to turn this video's voiceover script into demo animations: Swiss style, chart-first — show me the chart-selection storyboard first
+```
+
+```
+Pick 2-3 ui2v-motions packages suited to a "three-way comparison" and show me; then wire the chosen one onto my demo page's cue axis
+```
+
 ### Directory Structure
 
 ```text
@@ -663,6 +822,22 @@ ai-animation-skills/
 │       ├── README.md
 │       ├── references/          ← win11-kit specs / simulation-patterns playbook
 │       └── assets/              ← Simulation-kit template + 21-shot example + previews
+│   ├── swiss-shot-demos/
+│       ├── SKILL.md             ← chart-first philosophy + cp workflow
+│       ├── README.md
+│       ├── references/          ← swiss-system tokens / chart-vocabulary / production-spec
+│       └── assets/              ← Swiss starter template + 68-shot example + previews
+│   ├── ui2v-motions/
+│       ├── SKILL.md             ← pick→integrate recipe + hard constraints
+│       ├── README.md / _先看这里.md (mirror guide)
+│       ├── 01_动效库/itelmn/    ← 1,262 motion packages (641MB full mirror)
+│       ├── 02 CLI & docs / 03 indexes / 04 preview / 05 crawl logs
+│       └── assets-preview/      ← frame captures
+│   ├── code-mv-render/
+│       ├── SKILL.md             ← pick workflow + shared principles + reusable parts + red lines
+│       ├── README.md
+│       ├── references/          ← world-execute-spec / pdoom-spec engineering digests
+│       └── assets/preview/      ← frame captures (cover + pdoom plates)
 ├── web_animation/               ← Original example HTML (historical archive)
 ├── UI/                          ← UI design reference images
 ├── prompt.md                    ← Prompt template collection

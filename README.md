@@ -35,7 +35,7 @@ npx skills add https://github.com/jowilksasella/AI_Animation-Kurumi/tree/master/
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](./LICENSE)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](#贡献与许可)
-[![Skills count](https://img.shields.io/badge/Skills-10-orange?style=flat-square)](#skills-gallery)
+[![Skills count](https://img.shields.io/badge/Skills-13-orange?style=flat-square)](#skills-gallery)
 [![Spec](https://img.shields.io/badge/Spec-SKILL.md-black?style=flat-square)](https://agentskills.io)
 
 🌐 **English version**: [`README_EN.md`](README_EN.md)
@@ -59,6 +59,9 @@ npx skills add https://github.com/jowilksasella/AI_Animation-Kurumi/tree/master/
 - 📱 **手机系统 UI 演示** — 一台"真手机"的电影化编排录屏：锁屏通知、聊天、设置页、App 界面逐镜头呈现，HyperOS 级手感动效 + 3D 姿态手机演员
 - 🗂️ **叠放数据卡** — 论点卡从底部依次弹入、旧卡左叠成牌堆：折线描边 / 数字滚动 / 环形仪表按毫秒级时间线级联入场，自动播放对齐口播，录屏即成片
 - 🖥️ **仿 Win11 系统仿真** — 1:1 还原真电脑：资源管理器、开始菜单、系统弹窗、蓝屏修复逐镜头呈现，光标演出引导操作 + 教学标记层，全屏录屏即成片
+- 📐 **瑞士风格图表演示** — 纸底墨字发丝线的编辑部级排版：每页一张匹配内容的可视化图表（时间线/循环环/流程链/热力矩阵…20 种词汇），唯一强调橙，一镜一 HTML
+- 🎞️ **UI2V 动效库** — 1,262 个 GSAP 动效包全量离线镜像（ui2v.com/motions，641MB）：按镜头用途查件的索引 + paused 时间轴挂 cue 的接入配方，演示页画面层即插即用
+- 🎥 **代码渲染 MV 工程库** — 两支持续确定性音乐视频参考工程（歌词 MV + 生成式 3D MV）：帧 = f(歌曲时间)，浏览器预览与离线导出逐帧一致
 
 <div align="center">
 
@@ -123,6 +126,27 @@ npx skills add https://github.com/jowilksasella/AI_Animation-Kurumi/tree/master/
 <a href="#win11-ui-demos"><img width="2560" height="1440" alt="win11-ui-demos" src="./skills/win11-ui-demos/assets/preview/main.png" /></a>
 <br/><a href="#win11-ui-demos"><strong>win11-ui-demos</strong></a>
 <br/><sub>仿 Win11 系统仿真 / 光标演出动画</sub>
+</td>
+</tr>
+<tr>
+<td colspan="4" valign="top" align="center">
+<a href="#swiss-shot-demos"><img width="2560" height="1440" alt="swiss-shot-demos" src="./skills/swiss-shot-demos/assets/preview/main.png" /></a>
+<br/><a href="#swiss-shot-demos"><strong>swiss-shot-demos</strong></a>
+<br/><sub>瑞士风格图表演示 / 编辑级排版动画</sub>
+</td>
+</tr>
+<tr>
+<td colspan="4" valign="top" align="center">
+<a href="#ui2v-motions"><img width="2560" height="1440" alt="ui2v-motions" src="./skills/ui2v-motions/assets-preview/main.png" /></a>
+<br/><a href="#ui2v-motions"><strong>ui2v-motions</strong></a>
+<br/><sub>UI 动效素材库 / 1,262 个 GSAP 动效包</sub>
+</td>
+</tr>
+<tr>
+<td colspan="4" valign="top" align="center">
+<a href="#code-mv-render"><img width="2560" height="1440" alt="code-mv-render" src="./skills/code-mv-render/assets/preview/worldexecute-cover.jpg" /></a>
+<br/><a href="#code-mv-render"><strong>code-mv-render</strong></a>
+<br/><sub>代码渲染 MV 工程库 / 歌词 MV + 生成式 MV</sub>
 </td>
 </tr>
 </table>
@@ -528,6 +552,130 @@ Links: [README](./skills/win11-ui-demos/README.md) · [SKILL.md](./skills/win11-
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
 
+#### `swiss-shot-demos`
+
+<a href="./skills/swiss-shot-demos">
+<img width="2560" height="1440" alt="swiss-shot-demos preview" src="./skills/swiss-shot-demos/assets/preview/main.png" />
+</a>
+
+**分类:** 瑞士风格图表演示 / 编辑级排版动画
+**适用于:** 知识教程视频、技术复盘、产品发布、安全科普——需要"纸底墨字 + 匹配内容的可视化图表"的克制美学演示场景；也专治 AI 默认生成的"黑底油光"审美疲劳。
+
+`swiss-shot-demos` 制作瑞士国际主义风格（Swiss / International Typographic Style）的分镜演示动画：纸灰底、炭黑墨、发丝线、灰阶明度阶梯、每页唯一强调橙——编辑部级排版（Inter 大字 + 12 列网格 + 非对称布局）。核心方法论是**图表驱动**：拿到口播先问"这是什么图"，20 种图表词汇选型（大字计数、发丝轴柱、时间线、环形回路、流程链、泳道、状态机、双列对照、嵌套框、热力矩阵、点阵、计票清单、墨底终端卡…），主体图形区 ≥55% 面积。全面禁用 glow/霓虹/渐变光斑。内置 68 个成片镜头（AI 渗透教程全片）+ 预装瑞士系统的底盘模板。
+
+亮点:
+- 瑞士设计系统唯一正本：纸 `#F0EFEB` / 墨 `#1C1C1A` / 灰阶 L1-L7（明度即数据）/ 唯一强调橙 `#F5572F`（每页只标一个主角）
+- 图表词汇表 20 种"内容→图表"映射，纯 CSS/SVG 实现，零外部图表库
+- 禁用清单一票否决暗色油光全家桶（glow/光斑/渐变/扫描线/弹跳）
+- 入场三式 pop/fade/draw + 快进快停缓动；节拍动画一律 cue+tws 可冻结
+- QA 冻结钩子内置：URL 加 `#auto,t=毫秒` 自动起播冻结，无头截图零改文件
+- 生产纪律：cue 时刻=口播句绝对时间差、数字白名单不编造、不伪造终端回显
+
+<table>
+<tr>
+<td align="center" width="16.6%"><img width="2560" height="1440" alt="AI 循环环" src="./skills/swiss-shot-demos/assets/preview/shot-01.png" /></td>
+<td align="center" width="16.6%"><img width="2560" height="1440" alt="翻车时间线" src="./skills/swiss-shot-demos/assets/preview/shot-05.png" /></td>
+<td align="center" width="16.6%"><img width="2560" height="1440" alt="点阵对撞" src="./skills/swiss-shot-demos/assets/preview/shot-06.png" /></td>
+<td align="center" width="16.6%"><img width="2560" height="1440" alt="嵌套剖视" src="./skills/swiss-shot-demos/assets/preview/shot-12.png" /></td>
+<td align="center" width="16.6%"><img width="2560" height="1440" alt="双列对照" src="./skills/swiss-shot-demos/assets/preview/shot-40.png" /></td>
+<td align="center" width="16.6%"><img width="2560" height="1440" alt="热力矩阵" src="./skills/swiss-shot-demos/assets/preview/shot-49.png" /></td>
+</tr>
+<tr>
+<td align="center"><sub><code>AI 循环环</code><br />shot-0-1 五幕范本</sub></td>
+<td align="center"><sub><code>恶化时间线</code><br />四步逐级变深</sub></td>
+<td align="center"><sub><code>点阵对撞</code><br />15 → 50+ 翻倍</sub></td>
+<td align="center"><sub><code>嵌套剖视</code><br />宿主机套客户机</sub></td>
+<td align="center"><sub><code>双列对照</code><br />CTF vs 靶场</sub></td>
+<td align="center"><sub><code>热力矩阵</code><br />灰阶即数据</sub></td>
+</tr>
+</table>
+
+<sub>↑ 6 种图表词汇示例 — <a href="./skills/swiss-shot-demos/README.md"><b>打开完整图表词汇表</b></a>（68 个成片样板可直接运行）。</sub>
+
+Links: [README](./skills/swiss-shot-demos/README.md) · [SKILL.md](./skills/swiss-shot-demos/SKILL.md)
+
+---
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+#### `ui2v-motions`
+
+<a href="./skills/ui2v-motions">
+<img width="2560" height="1440" alt="ui2v-motions preview" src="./skills/ui2v-motions/assets-preview/main.png" />
+</a>
+
+**分类:** UI 动效素材库 / 演示画面层即插即用
+**适用于:** 视频演示页、产品页、落地页需要高质量 UI 动效（图表入场/列表滚动/卡片翻转/文字编排/数字滚动/时间线展开…）——给 AI 一座按"你要讲什么"查件的动效仓库。
+
+`ui2v-motions` 是 ui2v.com（UI-to-video 动效社区）背后 `illli-studio/motions` 仓库的**全量离线镜像**（2026-10-05，9,669 文件 / 641MB，校验零缺失）：**1,262 个动效包**，每个 = 单文件 HTML + 一条 paused 的 GSAP 时间轴（1,150 个 1920×1080）。默认暂停不是缺陷——节奏由调用方决定，恰与本仓库各演示技能的虚拟时钟/cue 时间轴同构：`TL.time(p*duration)` 整段摊进口播时长，或逐句拆拍 seek。配套按镜头用途的 25 类总览 + 1,262 条用途表 + 母版映射索引。
+
+亮点:
+- 1,262 包全量离线（元数据 registry-item.json 齐全），按"你要讲什么"查件：镜头用途总览 + CSV 可编程筛 + 母版短名单
+- paused GSAP 时间轴与演示底盘同构，接入配方现成（整段映射/逐句拆拍两种模式）
+- 四条硬约束已文档化：GSAP 本地化（库内 43 包自带副本）、禁 iframe、进来先 pause、720p×1.5
+- 红线清单：terminal 类只借外框弃打字、示例数字不照搬、配色字体按宿主重刷、对外发布前回原站确认授权
+- 官方 CLI 与双语文档随包
+
+<table>
+<tr>
+<td align="center" width="16.6%"><a href="./skills/ui2v-motions/01_动效库/itelmn/hero-badge-earn/index.html"><img width="2560" height="1440" alt="badge earn" src="./skills/ui2v-motions/assets-preview/shot-badge.png" /></a></td>
+<td align="center" width="16.6%"><a href="./skills/ui2v-motions/01_动效库/itelmn/agent-immune-codex-workflow/index.html"><img width="2560" height="1440" alt="workflow" src="./skills/ui2v-motions/assets-preview/main.png" /></a></td>
+<td align="center" width="16.6%"><a href="./skills/ui2v-motions/01_动效库/itelmn/agent-immune-screenflow/index.html"><img width="2560" height="1440" alt="screenflow" src="./skills/ui2v-motions/assets-preview/shot-screenflow.png" /></a></td>
+<td align="center" width="16.6%"><a href="./skills/ui2v-motions/01_动效库/itelmn/claw-game-release/index.html"><img width="2560" height="1440" alt="game release" src="./skills/ui2v-motions/assets-preview/shot-release.png" /></a></td>
+<td align="center" width="16.6%"><a href="./skills/ui2v-motions/01_动效库/itelmn/hero-deploy-pipeline/index.html"><img width="2560" height="1440" alt="deploy pipeline" src="./skills/ui2v-motions/assets-preview/shot-pipeline.png" /></a></td>
+<td align="center" width="16.6%"><a href="./skills/ui2v-motions/01_动效库/itelmn/hero-chat-bubbles/index.html"><img width="2560" height="1440" alt="chat bubbles" src="./skills/ui2v-motions/assets-preview/shot-chat.png" /></a></td>
+</tr>
+<tr>
+<td align="center"><sub><code>hero-badge-earn</code><br />徽章赢得动画</sub></td>
+<td align="center"><sub><code>codex-workflow</code><br />工作流编排</sub></td>
+<td align="center"><sub><code>agent-screenflow</code><br />屏幕流演示</sub></td>
+<td align="center"><sub><code>claw-game-release</code><br />发布封面动画</sub></td>
+<td align="center"><sub><code>hero-deploy-pipeline</code><br />部署管线流动</sub></td>
+<td align="center"><sub><code>hero-chat-bubbles</code><br />聊天气泡编排</sub></td>
+</tr>
+</table>
+
+<sub>↑ 6 / 1,262 个动效包截帧 — <a href="./skills/ui2v-motions/README.md"><b>打开选型索引与接入配方</b></a>。</sub>
+
+Links: [README](./skills/ui2v-motions/README.md) · [SKILL.md](./skills/ui2v-motions/SKILL.md)
+
+---
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+#### `code-mv-render`
+
+<a href="./skills/code-mv-render">
+<img width="2560" height="1440" alt="code-mv-render preview" src="./skills/code-mv-render/assets/preview/worldexecute-cover.jpg" />
+</a>
+
+**分类:** 代码渲染 MV 工程库 / 音乐视频渲染工程
+**适用于:** 做整片、带音轨、逐帧确定的音乐视频（歌词 MV / 生成式 MV）——想要"帧 = f(歌曲时间)、预览与导出逐帧一致"的工程方法论，而不是单页演示片段。
+
+`code-mv-render` 收录两支持续确定性的开源音乐视频参考工程：**world-execute-me-lyric-mv**（Mili《world.execute(me);》歌词 MV：Canvas2D+WebGL2，聊天界面 / 三墨版画 / 代码三种画面，颜色=状态）与 **pdoom-video**（"I'm Upping My P(doom)" 生成式 MV：three.js 逐字卡拉OK排版 + 子帧运动模糊）。要做一个整片 MV 时，从这里选最贴近的一支 fork / 改编，而不是从零搭渲染管线。
+
+亮点:
+- 同一原理两套实现：**每帧只是歌曲时间的函数**（`renderFrame(t)`），浏览器预览与无头 Chrome 离线导出逐帧一致
+- 可复用方法论：颜色=状态调色板、拍点集中管理、**块级自适应子帧运动模糊**（静止 12 / 运镜 36 / 甩镜 108–324）、预览=导出同源
+- 成品级**闪光安全**（WCAG 2.3.1 自检）+ 音画同步 / 单帧突跳自检 + 缩图表逐格回归
+- 两支工程均可导出 1080p60 / 4K60；配 `references/` 两份工程规范摘录
+- 许可边界清晰：代码 MIT、剪影 CC BY-NC-SA、**歌曲歌词不在仓库**（须自备并遵守原作者版权指引）
+
+<table>
+<tr>
+<td align="center" width="60%"><img width="2560" height="1440" alt="world.execute(me); cover" src="./skills/code-mv-render/assets/preview/worldexecute-cover.jpg" /><br /><sub><code>world-execute-me-lyric-mv</code><br />三墨版画 / 聊天界面与角色剪影</sub></td>
+<td align="center" width="40%"><img width="2560" height="1440" alt="pdoom" src="./skills/code-mv-render/assets/preview/pdoom-fig04.jpg" /><br /><sub><code>pdoom-video</code><br />线画场景 + 逐字排版</sub></td>
+</tr>
+</table>
+
+<sub>↑ 两支工程截帧预览 — <a href="./skills/code-mv-render/README.md"><b>打开工程详情与许可说明</b></a>。</sub>
+
+Links: [README](./skills/code-mv-render/README.md) · [SKILL.md](./skills/code-mv-render/SKILL.md)
+
+---
+
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
 ### 安装
 
 | # | 方式 | 适用于 | 指定版本? |
@@ -552,7 +700,10 @@ npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/ca
 npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/video-shot-demos
 npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/phone-ui-demos
 npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/win11-ui-demos
+npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/swiss-shot-demos
+npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/ui2v-motions
 npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/stacked-data-cards
+npx skills add https://github.com/Unclecheng-li/AI_Animation/tree/main/skills/code-mv-render
 ```
 
 > **默认安装 `main` 分支最新版本。** CLI 会从源码树直接读取每个 Skill 的最新 `SKILL.md`。
@@ -624,6 +775,14 @@ git clone https://github.com/Unclecheng-li/AI_Animation.git
 用 win11-ui-demos 把这段 Windows 教程的操作过程做成光标演示仿真动画，先出分镜表我确认
 ```
 
+```
+用 swiss-shot-demos 把这期视频的口播稿做成演示动画：瑞士风格、图表驱动，先出图表选型分镜表
+```
+
+```
+从 ui2v-motions 挑 2-3 个适合"三方案对比"的动效包给我看效果，选中的接入我的演示页 cue 时间轴
+```
+
 ### 目录结构
 
 ```text
@@ -685,6 +844,22 @@ ai-animation-skills/
 │       ├── README.md
 │       ├── references/          ← win11-kit 组件规格 / simulation-patterns 叙事手法
 │       └── assets/              ← Win11 仿真套件模板 + wukong 21 镜头实例 + 预览图
+│   ├── swiss-shot-demos/
+│       ├── SKILL.md             ← 图表优先哲学 + cp 工作流 + 交付标准
+│       ├── README.md
+│       ├── references/          ← swiss-system 设计正本 / chart-vocabulary 图表词汇 / production-spec 生产纪律
+│       └── assets/              ← 瑞士底盘模板（tokens+组件库预装）+ 68 镜头实例 + 预览图
+│   ├── ui2v-motions/
+│       ├── SKILL.md             ← 选型→接入配方 + 硬约束红线 + Token 纪律
+│       ├── README.md / _先看这里.md
+│       ├── 01_动效库/itelmn/    ← 1,262 个动效包本体（641MB 全量镜像）
+│       ├── 02_官方CLI与文档/ 03_清单与索引/ 04_预览/ 05_抓取日志/
+│       └── assets-preview/      ← 截帧预览图
+│   ├── code-mv-render/
+│       ├── SKILL.md             ← 选型工作流 + 共同原理 + 可复用要点 + 红线
+│       ├── README.md
+│       ├── references/          ← world-execute-spec / pdoom-spec 工程规范摘录
+│       └── assets/preview/      ← 预览截帧（cover + pdoom plates）
 ├── web_animation/               ← 原始示例 HTML（历史存档）
 ├── UI/                          ← UI 设计参考图
 ├── prompt.md                    ← Prompt 模板集合
