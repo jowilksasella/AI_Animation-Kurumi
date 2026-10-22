@@ -32,9 +32,21 @@
   const cues=options.captions||[],duration=options.total||options.duration||12,start=options.start||0;
   const topics=options.topics||[{start:0,title:options.title||'当前主题'}];let lastText=null;
   const fmt=t=>String(Math.floor(t/60)).padStart(2,'0')+':'+String(Math.floor(t%60)).padStart(2,'0');
+  const gap=options.captionGap===undefined?24:options.captionGap,maxLines=options.captionLines||2,maxSize=30,minSize=26;
+  /* Keep captions clear of every actor on this stage (either side), then wrap to maxLines, shrinking at most to minSize. */
+  function layoutCaptions(text){
+   let left=72,right=72;const width=stage.clientWidth;
+   for(const a of actors){const el=a.element;if(el.parentNode!==stage)continue;
+    if(el.classList.contains('fxk-left'))left=Math.max(left,el.offsetLeft+el.offsetWidth+gap);else right=Math.max(right,width-el.offsetLeft+gap)}
+   if(options.captionLeft!==undefined)left=options.captionLeft;if(options.captionRight!==undefined)right=options.captionRight;
+   captions.style.left=left+'px';captions.style.right=right+'px';
+   const span=captions.firstElementChild;let size=maxSize;
+   for(;;){span.style.fontSize=size+'px';if(span.offsetHeight<=size*1.45*maxLines+2||size<=minSize)break;size-=2}
+   if(text&&span.offsetHeight>size*1.45*maxLines+2)console.warn('[FXKurumi] caption exceeds '+maxLines+' lines; split it into shorter cues:',text);
+  }
   const layer={tick(ms){const t=start+ms/1000,p=clamp(t/duration),topic=[...topics].reverse().find(c=>t>=c.start)||topics[0],cue=cues.find(c=>t>=c.start&&t<c.end),text=cue?cue.text:'';
    progress.querySelector('.fxk-topic span').textContent='当前内容 · '+topic.title;progress.querySelector('.fxk-time').textContent=fmt(t)+' / '+fmt(duration);progress.querySelector('.fxk-fill').style.width=(p*100)+'%';progress.querySelector('.fxk-marker').style.left=(p*100)+'%';
-   if(text!==lastText){lastText=text;captions.firstElementChild.innerHTML=escape(text).replace(/(Gamma|Delta|Alpha|GEX|VIX|SPX|\d+(?:\.\d+)?%?)/g,'<em>$1</em>')}captions.style.opacity=text?1:0;
+   if(text!==lastText){lastText=text;captions.firstElementChild.innerHTML=escape(text).replace(/(Gamma|Delta|Alpha|GEX|VIX|SPX|\d+(?:\.\d+)?%?)/g,'<em>$1</em>');layoutCaptions(text)}captions.style.opacity=text?1:0;
   },destroy(){layers.delete(layer);progress.remove();captions.remove()}};
   layers.add(layer);layer.tick(0);return layer;
  }
