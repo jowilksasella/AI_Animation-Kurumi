@@ -1,0 +1,50 @@
+/* styles for engine/components.js (visual area 1000x840) */
+.rel{position:relative}
+.c-head{left:0;right:0;font-size:58px;font-weight:900;line-height:1.2;letter-spacing:1px;transform-origin:30% 50%}
+
+.c-axis{left:40px;right:40px;height:6px;border-radius:3px;background:var(--ink)}
+.c-col{border-radius:22px 22px 6px 6px;box-shadow:inset 0 -14px 0 rgba(0,0,0,.08),0 0 0 4px var(--ink)}
+.c-val{text-align:center;font-size:84px;font-weight:700;line-height:1;transform-origin:50% 80%}
+.c-lab{text-align:center;font-size:40px;font-weight:900;white-space:nowrap}
+.c-guide{left:40px;right:40px;height:0;border-top:5px dashed var(--red)}
+.c-gtxt{right:10px;background:var(--red);color:#fff;font-size:40px;font-weight:900;border-radius:16px;padding:6px 18px 10px;white-space:nowrap}
+.c-gtxt b{color:var(--yellow)}
+.c-badge{background:var(--yellow);color:var(--ink);font-size:46px;font-weight:900;border-radius:18px;padding:6px 20px 10px;box-shadow:0 0 0 4px var(--ink);transform-origin:20% 80%;white-space:nowrap}
+.c-note{left:40px;right:40px;font-size:34px;color:var(--soft);font-weight:700;text-align:center}
+.c-quote{left:150px;width:700px;padding:16px 20px 12px;background:#fff;border-radius:16px;box-shadow:0 0 0 3px var(--ink)}
+.c-quote.rel{left:16px;width:900px;margin-top:40px}
+.c-quote img{width:100%;display:block}
+.c-quote span{position:absolute;left:-14px;top:-20px;background:var(--blue);color:#fff;font-size:26px;font-weight:900;border-radius:8px;padding:1px 12px 4px}
+.c-quote .sweep{position:absolute;left:0;top:0;bottom:0;width:0;background:rgba(255,225,77,.38);mix-blend-mode:multiply;border-radius:16px}
+.c-qblock{left:0;right:0}
+.c-qblock .h{font-size:54px}
+
+.c-legend{left:60px;top:66px;display:flex;gap:28px;font-size:34px;font-weight:900}
+.c-legend i{display:inline-block;width:34px;height:20px;border-radius:5px;margin-right:10px;vertical-align:3px}
+.c-figbox{overflow:hidden;border-radius:18px;background:#fff;box-shadow:0 0 0 4px var(--ink)}
+.c-zoom{position:absolute;inset:0}
+.c-fig{display:block}
+.c-ov{position:absolute;left:0;top:0;pointer-events:none}
+.c-call{font-size:40px;font-weight:900;line-height:1.3;background:var(--yellow);border-radius:18px;padding:10px 20px 14px;box-shadow:0 0 0 4px var(--ink),0 10px 20px rgba(0,0,0,.15);white-space:nowrap;transform-origin:0 0}
+
+.c-pt{left:0;font-size:64px;font-weight:900;transform-origin:20% 50%;white-space:nowrap}
+.c-pt .x{color:var(--red);margin-right:18px}.c-pt .ok{color:var(--green);margin-right:18px}
+.c-pt .strk{position:absolute;left:0;top:52%;height:9px;width:0;background:var(--red);border-radius:5px}
+.c-pt.struck .tx{color:#9aa3a8}
+
+.c-ptitle{left:40px;top:120px;width:920px;padding:30px 36px 26px}
+.c-ptitle img{width:848px;display:block}
+.c-ptitle .cap1{margin-top:22px;font-size:40px;font-weight:900;text-align:center}
+.c-stamp{position:absolute;right:-10px;top:-40px;background:var(--red);color:#fff;font-size:44px;font-weight:900;border-radius:14px;padding:6px 18px 10px;box-shadow:0 0 0 4px var(--ink)}
+
+.c-flow{left:60px;right:60px;border-radius:24px;box-shadow:0 0 0 4px var(--ink),0 10px 0 rgba(21,32,43,.12);display:flex;align-items:center;justify-content:center;text-align:center;font-size:48px;font-weight:900;line-height:1.2;padding:0 24px}
+.c-arrow{left:488px;width:24px;background:linear-gradient(var(--ink),var(--ink)) 50% 0/8px calc(100% - 14px) no-repeat;clip-path:inset(0)}
+.c-arrow::after{content:'';position:absolute;left:0;bottom:0;border:12px solid transparent;border-top:16px solid var(--ink);border-bottom:0}
+.c-tile{background:#fff;border-radius:22px;box-shadow:0 0 0 4px var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:40px;font-weight:900;line-height:1.2}
+.c-tile.hot{background:var(--yellow)}
+.c-tile small{display:block;font-size:26px;font-weight:700;color:var(--soft)}
+.c-stat{left:0;right:0;text-align:center;font-size:200px;font-weight:700;line-height:1}
+.c-statlab{left:0;right:0;text-align:center;font-size:52px;font-weight:900}
+.c-side{width:470px;border-radius:28px;box-shadow:0 0 0 5px var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:46px;font-weight:900;line-height:1.25;padding:20px}
+.c-side .big{display:block;font-size:84px}
+.c-vs{left:440px;min-width:120px;height:120px;border-radius:60px;padding:0 18px;white-space:nowrap;transform:translateX(-0%);background:var(--red);color:#fff;font-size:52px;font-weight:900;text-align:center;line-height:116px;box-shadow:0 0 0 5px var(--ink)}

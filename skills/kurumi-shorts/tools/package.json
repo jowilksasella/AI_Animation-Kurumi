@@ -1,0 +1,8 @@
+{
+  "name": "kurumi-shorts-tools",
+  "private": true,
+  "description": "Frame capture for kurumi-shorts (puppeteer-core drives the local Chrome).",
+  "dependencies": {
+    "puppeteer-core": "23.11.1"
+  }
+}
