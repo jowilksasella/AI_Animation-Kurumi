@@ -44,6 +44,8 @@ const CFG={kurumi:{width:860,side:'left',offset:-70,top:1330,out:-360},mochiko:{
 function build(){
   document.body.classList.add(EP.lang);
   $('#titlebar').innerHTML=`<div class="row"><span class="brand">${EP.brand}</span><span class="ep">${EP.epLabel}</span></div><h1><span>${EP.heading}</span></h1>`;
+  /* title: up to two lines; shrink from 54px to fit, keeping it above the visual area */
+  const h1=$('#titlebar h1');for(let fs=54;fs>=38;fs-=2){h1.style.fontSize=fs+'px';if(h1.offsetHeight<=fs*1.14*2+4)break}
   tagEl=$('#panel .tag');cam=$('#cam');flashEl=$('#flash');
   const bg=$('#bg');[['#ffb3d1',620,-80,1300],['#cdb4ff',560,640,1250],['#ffe48a',520,300,420]].forEach(([c,s,x,y])=>{const i=document.createElement('i');i.style.cssText=`background:${c};width:${s}px;height:${s}px`;i.x=x;i.y=y;bg.appendChild(i);blobs.push(i)});
   if(EP.outro)for(const s of scenes)if(!s.overlay)s.end=Math.min(s.end,EP.outro.start-.15);
@@ -129,7 +131,7 @@ window.renderAt=function(t){closeScene=scenes.find(s=>s.closeup&&t>=s.start)||nu
 /* Layout check (tools/render.js qa): measured with the camera reset so punches/shakes don't count.
    Inline style transforms are reset first, so animation-only transforms never count; position with left/top, not transform.
    Flags text overlapping text/images, content leaving the visual area, unloaded images, a last line holding a
-   single character, captions over 2 lines or inside the Shorts UI zones, and a wrapped title.
+   single character, captions over 2 lines or inside the Shorts UI zones, and a title over two lines or reaching the visual area.
    Elements under .float may sit on images/SVG (badges, highlight zones) but are still checked against text. */
 const SAFE={bottom:1920-340,right:1080-100};
 function textBox(el){const r=document.createRange();r.selectNodeContents(el);const rs=[...r.getClientRects()].filter(x=>x.width>1);
@@ -167,7 +169,8 @@ window.__layoutCheck=function(t){
     if(tb&&tb.lines.length>2)out.push('caption over 2 lines: "'+lastCap.text+'"');
     if(tb&&(tb.bottom>SAFE.bottom||tb.right>SAFE.right))out.push('caption in Shorts UI zone');
     if(tb&&tb.lines.length>1){const l=tb.lines[tb.lines.length-1];if(l.right-l.left<fs*1.3)out.push('caption single-character last line: "'+lastCap.text+'"')}}
-  const h1=$('#titlebar h1');if(h1&&h1.offsetHeight>parseFloat(getComputedStyle(h1).fontSize)*1.3+10)out.push('title wraps to 2 lines');
+  const h1=$('#titlebar h1');if(h1&&h1.offsetHeight>parseFloat(h1.style.fontSize)*1.14*2+4)out.push('title over 2 lines');
+  if(h1&&h1.getBoundingClientRect().bottom>$('#panel').getBoundingClientRect().top-4)out.push('title runs into the visual area');
   return out;
 };
 window.__checkTimes=function(dur){const ts=[];

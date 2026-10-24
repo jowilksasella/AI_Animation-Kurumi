@@ -1,0 +1,4 @@
+.big2{font-size:120px}
+.chip{font-size:40px;font-weight:900;background:#fff;border-radius:999px;padding:6px 24px 10px;box-shadow:0 0 0 4px var(--ink);white-space:nowrap}
+.hi{left:150px;top:300px}.lo{left:330px;top:560px}
+.zero{left:120px;top:660px;background:#dbe9fb}

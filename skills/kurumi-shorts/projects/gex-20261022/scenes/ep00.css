@@ -1,0 +1,4 @@
+/* ep00 only */
+.disc{border-radius:12px}
+.lab1,.lab2{left:450px;right:0;font-size:58px;font-weight:900;line-height:1.25;transform-origin:20% 50%}
+.lab1{top:170px}.lab2{top:450px}

@@ -1,0 +1,5 @@
+.qn{display:inline-block;width:86px;height:86px;border-radius:50%;background:var(--red);color:#fff;text-align:center;line-height:84px;font-size:62px;vertical-align:4px;box-shadow:0 0 0 5px var(--ink)}
+.big3{font-size:110px}
+.ck{font-size:110px;color:var(--green)}
+.miss{left:160px;top:560px;font-size:68px;font-weight:900;background:#ffd6d6;border-radius:24px;padding:10px 30px 16px;box-shadow:0 0 0 5px var(--ink)}
+.c-tile{font-size:56px}

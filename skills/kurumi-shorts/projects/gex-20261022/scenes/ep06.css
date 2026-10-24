@@ -1,0 +1,10 @@
+.fml{left:0;right:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px;font-size:72px;font-weight:900}
+.fp{display:inline-block;background:#fff;border-radius:18px;padding:6px 20px 12px;box-shadow:0 0 0 4px var(--ink)}
+.fp:nth-child(even){background:none;box-shadow:none;padding:0}
+.chip2{left:170px;top:600px;font-size:52px;font-weight:900;background:#ffd6d6;border-radius:22px;padding:10px 28px 16px;box-shadow:0 0 0 4px var(--ink)}
+.grid{left:150px;top:180px;width:700px;height:420px;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;transform-origin:50% 50%}
+.grid i{border-radius:14px;background:#d9f5e3;box-shadow:0 0 0 4px var(--ink)}
+.grid i.neg{background:#ffd6d6}
+.gl1{left:0;right:0;top:100px;text-align:center;font-size:44px;font-weight:900}
+.sum{left:410px;top:260px;width:180px;height:180px;border-radius:50%;background:var(--yellow);font-size:130px;font-weight:900;text-align:center;line-height:170px;box-shadow:0 0 0 6px var(--ink)}
+.c-side .big{white-space:nowrap}

@@ -1,0 +1,34 @@
+/* cover 1080x1920; key content stays inside the centre 4:5 crop (y 285–1635) that profile grids show */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#15202b;--red:#e5383b;--yellow:#ffe14d}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#fff8ec}
+body{font-family:var(--cjk),'Microsoft YaHei',sans-serif;color:var(--ink)}
+body.sc{--cjk:'Noto Sans SC'}body.tc{--cjk:'Noto Sans HK'}
+#stage{position:absolute;inset:0;overflow:hidden;background:radial-gradient(rgba(21,32,43,.08) 2.4px,transparent 2.8px) 0 0/40px 40px,#fff8ec}
+#bg i{position:absolute;border-radius:50%;filter:blur(40px);opacity:.75}
+#bg .b1{left:-200px;top:1150px;width:760px;height:760px;background:#ffb3d1}
+#bg .b2{left:560px;top:1250px;width:700px;height:700px;background:#cdb4ff}
+#bg .b3{left:180px;top:380px;width:760px;height:620px;background:#ffe48a}
+#chips{position:absolute;left:0;right:0;top:300px;display:flex;justify-content:center;gap:16px;z-index:5}
+#chips span{font-weight:900;font-size:44px;color:#fff;border-radius:14px;padding:6px 22px 10px}
+#chips .brand{background:var(--ink)}#chips .ep{background:var(--red)}
+#head{position:absolute;left:40px;right:40px;top:500px;z-index:5;text-align:center;font-weight:900;line-height:1.16;letter-spacing:2px}
+#head .ln{display:block;white-space:nowrap}
+#head b{color:var(--red);background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 94%,transparent 94%)}
+#warn{position:absolute;right:46px;top:250px;width:150px;height:150px;border-radius:50%;background:var(--red);color:#fff;font-size:120px;font-weight:900;text-align:center;line-height:146px;box-shadow:0 0 0 7px var(--ink),0 12px 0 rgba(21,32,43,.2);transform:rotate(12deg);z-index:6}
+#strip{position:absolute;left:0;right:0;top:1530px;z-index:6;text-align:center}
+#strip span{display:inline-block;font-weight:900;font-size:46px;background:#fff;border-radius:999px;padding:8px 34px 12px;box-shadow:0 0 0 5px var(--ink)}
+.fxk-actor{transition:none!important;opacity:1!important;transform:none!important;z-index:4}
+.fxk-actor .fxk-speech{display:none}
+
+/* alarm layer: caution tape, red kicker, heavier headline */
+#stage::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%,transparent 45%,rgba(229,56,59,.22) 100%);z-index:1}
+.tape{position:absolute;left:-60px;right:-60px;height:92px;background:repeating-linear-gradient(-45deg,#ffd400 0 46px,#15202b 46px 92px);box-shadow:0 8px 0 rgba(0,0,0,.18);z-index:7;display:flex;align-items:center;overflow:hidden}
+.tape span{white-space:nowrap;font-size:46px;font-weight:900;color:#fff;background:var(--red);padding:2px 18px 6px;margin-left:30px;letter-spacing:4px}
+.t1{top:150px;transform:rotate(-4deg)}.t2{top:1660px;transform:rotate(3deg)}
+#kicker{position:absolute;left:0;right:0;top:395px;text-align:center;z-index:6}
+#kicker span{display:inline-block;font-weight:900;font-size:56px;color:#fff;background:var(--red);padding:6px 30px 12px;border-radius:12px;box-shadow:0 0 0 5px var(--ink);transform:rotate(-2deg)}
+#head{text-shadow:0 0 0 #fff,4px 4px 0 #fff,-4px -4px 0 #fff,4px -4px 0 #fff,-4px 4px 0 #fff}
+#head b{text-shadow:none}
+#warn{top:280px;z-index:8}
+#strip span{background:var(--ink);color:#fff;box-shadow:0 0 0 5px #fff}

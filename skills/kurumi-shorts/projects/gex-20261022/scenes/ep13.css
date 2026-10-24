@@ -1,0 +1,8 @@
+.tline{left:0;top:220px;width:1000px;height:520px}
+.tline .bar{position:absolute;left:120px;top:150px;width:760px;height:16px;border-radius:8px;background:var(--ink);transform-origin:0 50%}
+.tline .dot{position:absolute;top:118px;width:80px;height:80px;border-radius:50%;box-shadow:0 0 0 6px var(--ink)}
+.tline .d0{left:80px;background:#fff}.tline .d1{left:840px;background:var(--red)}
+.tline .lb{position:absolute;font-size:46px;font-weight:900;line-height:1.25}
+.tline .l0{left:40px;top:260px}.tline .l1{right:20px;top:330px;text-align:right}
+.hide{left:150px;top:560px;font-size:64px;font-weight:900;background:#ffd6d6;border-radius:24px;padding:10px 30px 16px;box-shadow:0 0 0 5px var(--ink)}
+.c-tile{font-size:54px}

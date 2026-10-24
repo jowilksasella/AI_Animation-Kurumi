@@ -1,0 +1,7 @@
+.chip3{left:60px;right:60px;top:600px;text-align:center;font-size:52px;font-weight:900;background:#fff;border-radius:24px;padding:14px 20px 20px;box-shadow:0 0 0 5px var(--ink)}
+.chip3.b{top:640px;background:#ffe14d}
+.chip3.c{top:560px}
+.loop{transform-origin:50% 50%}
+.node{width:240px;height:150px;border-radius:24px;background:#fff;box-shadow:0 0 0 5px var(--ink);display:flex;align-items:center;justify-content:center;text-align:center;font-size:42px;font-weight:900;line-height:1.2}
+.n1{left:130px;top:270px}.n2{left:630px;top:270px;background:#ffe14d}
+.loopt{left:0;right:0;top:640px;text-align:center;font-size:72px;font-weight:900}

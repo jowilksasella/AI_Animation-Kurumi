@@ -1,0 +1,12 @@
+.pin .pinhead{transform-box:fill-box}
+.hist{left:45px;top:300px;width:910px;height:420px}
+.hist i{position:absolute;bottom:60px;width:66px;border-radius:10px 10px 0 0;background:#9aa7b1;transform-origin:50% 100%}
+.hist i.hot{background:var(--red)}
+.hist .axis{position:absolute;left:0;right:0;bottom:54px;height:6px;background:var(--ink)}
+.hist span{position:absolute;bottom:0;font-size:40px;font-weight:700;transform:translateX(-50%)}
+.hist .s1{left:33px}.hist .s2{left:525px;color:var(--red)}.hist .s3{left:853px}
+.illu{right:0;top:270px;font-size:30px;font-weight:800;color:var(--soft)}
+.sub3{left:0;right:0;top:300px;font-size:44px;font-weight:800;color:var(--soft);text-align:center}
+.sub3.c{top:250px}
+.big2{font-size:110px}
+.refchip{left:200px;top:700px;font-size:38px;font-weight:900;background:#d6f1f1;border-radius:999px;padding:8px 28px 12px;box-shadow:0 0 0 4px var(--ink)}

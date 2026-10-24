@@ -1,0 +1,122 @@
+{
+  "episode_dir": "C:/Invest/Videos/output/speech/gex-anime-shorts-20261022/{ep}/out",
+  "media_dir": "C:/Invest/Videos/output/speech/gex-anime-shorts-20261022/source-map/crops",
+  "tc_config": "s2hk",
+  "langs": [
+    "sc",
+    "tc"
+  ],
+  "outro": {
+    "dir": "C:/Invest/Videos/output/speech/gex-anime-outro-20261022/out",
+    "turn": "001",
+    "gap": 0.5,
+    "tail": 1.2,
+    "ui": {
+      "headline": "觉得有帮助？",
+      "button": "关注",
+      "done": "已关注",
+      "sub": "每集一分钟，一起读懂期权白皮书"
+    }
+  },
+  "titles": {
+    "ep00": {
+      "title": "暴跌那天，有人被规则逼着砸盘，你却还不知道",
+      "cover": "暴跌那天\n有人被逼着**砸盘**\n你却还不知道",
+      "kicker": "你可能还不知道",
+      "expression": "concern"
+    },
+    "ep01": {
+      "title": "恐慌指数很低就放心？危险可能正藏在这里",
+      "cover": "恐慌指数很低\n你就**放心**了？",
+      "kicker": "危险可能就藏在这里",
+      "expression": "concern"
+    },
+    "ep02": {
+      "title": "风平浪静的市场，可能是假平静",
+      "cover": "风平浪静的市场\n可能是**假平静**",
+      "kicker": "很多人都不知道",
+      "expression": "concern"
+    },
+    "ep03": {
+      "title": "期权到期那天，你的股票可能被“钉死”",
+      "cover": "期权到期那天\n你的股票\n可能被**钉死**",
+      "kicker": "很多人都不知道",
+      "expression": "concern"
+    },
+    "ep04": {
+      "title": "股价越跌，他们越要卖：跌势就是这样被放大的",
+      "cover": "股价越跌\n他们**越要卖**",
+      "kicker": "很多人都不知道",
+      "expression": "concern"
+    },
+    "ep05": {
+      "title": "同一群人，今天帮你减震，明天火上浇油",
+      "cover": "今天帮你减震\n明天**火上浇油**",
+      "kicker": "很多人都不知道",
+      "expression": "concern"
+    },
+    "ep06": {
+      "title": "看到“−87亿”就恐慌卖出？你可能被单位骗了",
+      "cover": "看到**−87亿**\n就恐慌卖出？",
+      "kicker": "你可能被单位骗了",
+      "expression": "concern"
+    },
+    "ep07": {
+      "title": "你深信的伽马敞口，其实是猜出来的",
+      "cover": "你深信的指标\n其实是\n**猜出来的**",
+      "kicker": "很多人都不知道",
+      "expression": "concern"
+    },
+    "ep08": {
+      "title": "连顶级期刊也只能估算做市商的仓位",
+      "cover": "连顶级期刊\n也只能**估算**",
+      "kicker": "很多人都不知道",
+      "expression": "concern"
+    },
+    "ep09": {
+      "title": "就算拿到交易所数据，做市商的底牌你也看不清",
+      "cover": "做市商的底牌\n你也**看不清**",
+      "kicker": "很多人都不知道",
+      "expression": "concern"
+    },
+    "ep10": {
+      "title": "暴涨暴跌几乎全挤在这一边，你站对了吗？",
+      "cover": "**暴涨暴跌**\n全挤在这一边\n你站对了吗？",
+      "kicker": "很多人都不知道",
+      "expression": "concern"
+    },
+    "ep11": {
+      "title": "你以为的原因，可能其实是结果",
+      "cover": "你以为的原因\n可能是**结果**",
+      "kicker": "很多人都不知道",
+      "expression": "concern"
+    },
+    "ep12": {
+      "title": "同样的买卖，你的股票却被推得大起大落",
+      "cover": "同样的买卖\n**你的股票**\n却大起大落",
+      "kicker": "很多人都不知道",
+      "expression": "concern"
+    },
+    "ep13": {
+      "title": "零日期权会引爆股市？你可能怕错了方向",
+      "cover": "零日期权\n会**引爆股市**？",
+      "kicker": "你可能怕错了方向",
+      "expression": "concern"
+    },
+    "ep14": {
+      "title": "“能挑出超额收益”？这个说法连一个数字都没有",
+      "cover": "“超额收益”\n**一个数字**都没给",
+      "kicker": "小心这种说法",
+      "expression": "concern"
+    },
+    "ep15": {
+      "title": "看到伽马敞口图就入市？小心成为接盘侠",
+      "cover": "看到图就入市？\n小心成为\n**接盘侠**",
+      "kicker": "很多人都不知道",
+      "expression": "concern"
+    }
+  },
+  "cover_strip": "看完再做决定",
+  "source_map": "C:/Invest/Videos/output/speech/gex-anime-shorts-20261022/source-map/source-map.json",
+  "out_dir": "C:/Invest/Videos/output/video/gex-shorts-20261022"
+}
