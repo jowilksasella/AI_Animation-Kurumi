@@ -13,6 +13,7 @@
 | `covers/sc/`、`covers/tc/`、`covers/README.md`、`tools/covers.py` | 较早的品牌色封面方案（社交账号 session 制作），保留备选 |
 | `covers/icon/` | 账号头像（定稿：`gex-icon-coin-sprout-v4-1024.png`） |
 | `social/` | 账号名称与简介、发布时间表、各平台文案（`tools/copy_text.py` 生成） |
+| `videos.md` | **32 条成片在本机的完整路径**（影片本身不进 git） |
 
 ## 输出（不进 git）
 
